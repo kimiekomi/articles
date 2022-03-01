@@ -1,13 +1,20 @@
 # Python GUI App with Tkinter  
+<br>             
 
-![Cypher GUI Image](/gui-image.png)
+<div align="center">
+<img style="float: block; margin: 0" width="350" height="400" src="gui-image.png"> 
+</div>
+
+<br>             
 
 This article will explain how I built a Python graphical user interface (GUI) application, and provide a general overview of Tkinter - Python’s standard GUI package. The purpose of my application is to encrypt/decrypt messages using either the Caesar or Vigenere cypher method. Please note that I structured my code using object-oriented programming (OOP). This was done mainly to increase readability and maintainability, but moreover, OOP allows me or other programmers to easily import and reuse my code in the future.    
 
 Enough said, let’s dive into the code!   
+<br>             
     
 
 ### Step 1: Import the main tkinter module and its submodule, ttk               
+<br>             
 
 ```python
 
@@ -45,11 +52,13 @@ class App(Tk):
         with open("app.config", "w") as config:
             config.write(self.geometry())
 ```    
-
+<br>             
 The first task is simply to create a window to contain all the GUI elements. This section is in its own class because it is not integral to the main purpose of the application, and can be reused in future Tkinter projects. I elected to center the window on the screen once the application runs. Additionally, I provided users the ability to set the position of the window, such that if the user reopens the program, it will appear at the coordinates where the user previously positioned it. This is achieved by creating a function that generates a file and records the position of the window. When the application runs, the program will open the file and set the position to the coordinates in said file.   
+<br>             
+<br>             
 
-
-### Step 2: Create GUI elements, also known as, widgets         
+### Step 2: Create GUI elements, also known as, widgets      
+<br>             
 
 ```python
 
@@ -75,9 +84,11 @@ class CypherApplication(App):
 
 ```
 
+<br>             
 
 Every GUI element in Tkinter is considered a widget, including labels, entry fields, text boxes, and buttons. In Tkinter, constructing any widget is always a two-step process. After I created all the necessary widgets, I then added them to the window using the grid method which allows for more customization. The workflow for this application goes from top to bottom then left to right, so that determined the order in which the widgets were positioned.         
        
+<br>             
 
 ```python
 
@@ -112,9 +123,12 @@ Every GUI element in Tkinter is considered a widget, including labels, entry fie
     self.keyword.set("friends")
 
 ```      
+<br>             
 
 The next step involved adding functionality to the buttons. Users are able to select the method and direction in which to cypher their message. To avoid confusion, I disabled an entry field depending on which cypher method was selected.  In other words, if the “Caesar” button was selected, then the keyword entry would be disabled (and vice-a-versa). This was done because the keyword entry only accepts alphabet characters and the offset entry only accepts integers.   
-       
+
+<br>             
+
 ```python
 
     self.encode_decode = StringVar()
@@ -147,9 +161,11 @@ The next step involved adding functionality to the buttons. Users are able to se
 
 ```         
 
+<br>             
 
 To handle user input errors, I created error message labels which will always be hidden unless the user enters “incorrect” data. I also included default settings and values in the application, to expedite the process and enhance the user experience. Whenever the “reset” button is clicked, the program will revert to the default button selections with blank message boxes and hidden error labels.   
          
+<br>             
 
 ```python
 
@@ -189,13 +205,17 @@ To handle user input errors, I created error message labels which will always be
       self.offset_error_label.grid_remove()
 
 ```       
+<br>             
 
 ### Step 3: Create Caesar and Vigenere cypher functions   
+<br>             
       
 A bulk of the code is dedicated to defining the Caesar and Vigenere functions. For the sake of brevity, I will not go into the minute details of these functions in this article. A comprehensive description of these functions will be included in the subsequent article. Please note that both of these cypher functions are excluded from the CypherApplication class, to provide individual testing and easy accessibility to the code.   
 
+<br>             
 
 ### Step 4: Create function to handle cypher methods   
+<br>             
       
 ```python
 
@@ -243,10 +263,14 @@ A bulk of the code is dedicated to defining the Caesar and Vigenere functions. F
 
 ```         
 
+<br>             
 
 The principle function in my code conducts the exception handles, manages the options selections, and displays the results. The exception handling is accomplished in this main function because it is best practice to catch (and resolve) errors sooner than later, before proceeding further along the program. Lastly, I elected to create a separate function to display the results simply to provide the program more modularity and easier debugging.   
-       
+
+<br>             
+
 ### Step 5: Create instance of CypherApplication class    
+<br>             
       
 ```python
 
@@ -256,8 +280,11 @@ if __name__ == "__main__":
 
 ```         
 
+<br>             
 
 At the bottom of my code, I added a mainloop() method to keep the program running until the window is closed. This method listens for events, executes the script, and updates the GUI accordingly. Finally, I created an instance of the class, and passed in a title and window dimensions. Please note that I added an if statement at the end of my code. This “gate” is used to prevent the program from executing and merely be imported, if I or other programmers import this module.    
       
+<br>             
 
 And that is all I have for you, folks! If you are interested in the inner workings of my Caesar or Vigenere functions, check out Part 2 of this article. The entirety of my GUI app program is available on [GitHub](https://github.com/kimiekomi/code_crack). Thanks for reading and as always, Happy Coding!    
+
