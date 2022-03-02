@@ -67,7 +67,7 @@ offsets = []
 
 <br>
 
-Since spaces and special characters will not be assigned a keyword character, I had to create a variable to keep track of the keyword index. This keyword index variable will come into play later on in the message iteration; but for starters, it is set to 0. The next order of business was to calculate the offset values of each keyword character. I created a empty list to store all the values, and based on the action, all the values would either be positive if the action was set to "encode", or negative values if the action was set to "decode". 
+Since spaces and special characters will not be assigned a keyword character, I had to create a variable to keep track of the keyword index. This keyword index variable will come into play later on in the message iteration; but for starters, it is set to 0. The next order of business was to calculate the offset values of each keyword character. These values will determine the position each letter in the message would shift by. I created a empty list to store all the values, and based on the action passed in, all the values would either be positive or negative integers. 
 
 <br>
 
@@ -76,23 +76,36 @@ Since spaces and special characters will not be assigned a keyword character, I 
 
 ```python
 
-for letter in message:
+    new_message = []
 
-                if trace: print(f"iterating through '{letter}' in message")
-                
-                if not letter.isalpha():
-                new_message.append(letter)
-                continue
+    for letter in message:
 
-                if letter in lower_letters:
-                old_index = ord(letter) - ord("a")
+        if trace: print(f"iterating through '{letter}' in message")
+        
+        if not letter.isalpha():
+        new_message.append(letter)
+        continue
 
-                else:
-                old_index = ord(letter) - ord("A")
+        if letter in lower_letters:
+        old_index = ord(letter) - ord("a")
 
-                if trace: print(f"old_index = '{old_index}', offsets[keyword_index] = '{offsets[keyword_index]}', new_message - '{new_message}'")
+        else:
+        old_index = ord(letter) - ord("A")
 
+        if trace: print(f"old_index = '{old_index}', offsets[keyword_index] = '{offsets[keyword_index]}', new_message - '{new_message}'")
 
+```
+
+<br>
+
+As I iterate through the message, I conduct a 2-part conditional check. First, I must determind whether the letter is a special character. If it is, I simply append it to the empty list and continue to the next letter. If the letter is indeed in the alphabet, then I need to ascertain its casing to obtain the correct letter index. 
+
+<br>
+
+### Step 3: Iterate through each letter in the messagee
+<br>
+
+```python
 
 
 
