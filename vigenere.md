@@ -15,9 +15,9 @@ For example, let's use the message, "attack at dawn!", with the keyword, "sun". 
 
 <br>
 
-        - message: attack at dawn!
-        - keyword: sunsun su nsun
-        - decoded: sngswx sn qsqa!
+        - message : attack at dawn!
+        - keyword : sunsun su nsun
+        - cyphered: sngswx sn qsqa!
 
 <br>
 
@@ -71,7 +71,7 @@ Since spaces and special characters will not be assigned a keyword character, I 
 
 <br>
 
-### Step 2: Iterate through the message and obtain new index
+### Step 2 thru 5: Iterate through the message and obtain letter replacement
 <br>
 
 ```python
@@ -128,7 +128,7 @@ As I iterated through the message, I conducted a 2-part conditional check - firs
 
 <br>
 
-### Step 3: Repeat the keyword
+### Step 6: Repeat the keyword
 <br>
 
 ```python
@@ -145,6 +145,28 @@ As I iterated through the message, I conducted a 2-part conditional check - firs
 The main challenge to this cypher was repeating and reassigning the keyword. I did not want to assign a keyword character to spaces and special characters. Therefore, I had to index the keyword from within the loop. Earlier, the keyword index was set to 0. If the letter in question is a space or special character, then the keyword index remains the same. In the words, the keyword characater in sequence would only be assigned if the letter is in the alphabet. Furthermore, to cycle the keyword assignment and avoid an IndexError, I applied a modulus, of the length of the keyword, to the keyword index. 
 
 <br>
+
+### Step 7: Repeat the keyword
+<br>
+
+```python
+
+        new_message = "".join(new_message)
+        
+    if debug: print(f"new_message - '{new_message}'")
+        
+    return new_message
+
+```
+
+<br>
+
+At this point, all that was left to do was, joining the new letter replacements into one string, and ta-da! I have a new encoded (or decoded) message! Not too shabbe, eh?! What makes this cypher a tad more difficult to crack, is that each letter is shifted a different amount, whereas with the Caesar method, each letter is uniformly shifted. 
+
+<br>
+
+So there you have it, folks - a simple Vigenere cypher written in Python! The entirety of my Vigenere cypher code is available on [GitHub](https://github.com/kimiekomi/code_crack). Thanks for reading and as always, Happy Coding!
+
 
 
 
