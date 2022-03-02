@@ -46,7 +46,7 @@ def vigenere_cypher(message, keyword, action):
 ```
 <br>
 
-The first section of the function looks practically identical to my Caesar cypher function. Once again, I defined the function and passed in an action to determine the encryption direction. The cypher was written to accept both upper and lower case letters; however, to simplify matters, I converted the keyword to all lower case. Now, this is where the intricacy of the code begins. 
+The first section of the function looks practically identical to my Caesar cypher function. Once again, I defined the function and passed in an action to determine the encryption direction. The cypher was written to accept both upper and lower case letters; however, to simplify matters, I converted the keyword to all lower case. 
 
 <br>
 
@@ -71,7 +71,7 @@ Since spaces and special characters will not be assigned a keyword character, I 
 
 <br>
 
-### Step 2: Iterate through each letter in the messagee
+### Step 2: Iterate through the message and obtain new index
 <br>
 
 ```python
@@ -98,14 +98,68 @@ Since spaces and special characters will not be assigned a keyword character, I 
 
 <br>
 
-As I iterate through the message, I conduct a 2-part conditional check. First, I must determind whether the letter is a special character. If it is, I simply append it to the empty list and continue to the next letter. If the letter is indeed in the alphabet, then I need to ascertain its casing to obtain the correct letter index. 
+As I iterated through the message, I conducted a 2-part conditional check - first, I  determined whether the letter is a special character. If it is, I simply appended it to the empty list and continued to the next letter. If the letter is indeed in the alphabet, then I had a list of items to perform which included: 
 
-<br>
+- obtaining the correct letter index based on the letter casing
+- calculating the new index and apply a modulus of the alphabet length 
+- appending the replacement letter based on the new index previously calculated, once again, taking into consideration the letter casing
 
-### Step 3: Iterate through each letter in the messagee
 <br>
 
 ```python
+
+        new_index = old_index + (offsets[keyword_index] % 26)
+
+        if new_index > 25:
+            new_index -= 26
+
+        if new_index < 0:
+            new_index += 26
+
+        if trace: print(f"new_index - '{new_index}'")
+
+        if letter.isupper():
+            new_message.append(upper_letters[new_index])
+
+        else:
+            new_message.append(lower_letters[new_index])
+
+```
+
+<br>
+
+### Step 3: Repeat the keyword
+<br>
+
+```python
+
+        keyword_index += 1
+
+        if keyword_index >= len(keyword):
+            keyword_index = keyword_index % len(keyword)
+
+```
+
+<br>
+
+The main challenge to this cypher was repeating and reassigning the keyword. I did not want to assign a keyword character to spaces and special characters. Therefore, I had to index the keyword from within the loop. Earlier, the keyword index was set to 0. If the letter in question is a space or special character, then the keyword index remains the same. In the words, the keyword characater in sequence would only be assigned if the letter is in the alphabet. Furthermore, to cycle the keyword assignment and avoid an IndexError, I applied a modulus, of the length of the keyword, to the keyword index. 
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
