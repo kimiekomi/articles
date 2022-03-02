@@ -98,11 +98,11 @@ Since spaces and special characters will not be assigned a keyword character, I 
 
 <br>
 
-As I iterated through the message, I conducted a 2-part conditional check - first, I  determined whether the letter is a special character. If it is, I simply appended it to the empty list and continued to the next letter. If the letter is indeed in the alphabet, then I had a list of items to perform which included: 
+As I iterated through the message, I conducted a two-part conditional check - first, I determined whether the letter is a special character. If it is, I simply appended it to the empty list and continued to the next letter. If the letter is indeed in the alphabet, then I had a list of items to perform which included: 
 
 - obtaining the correct letter index based on the letter casing
 - calculating the new index and apply a modulus of the alphabet length 
-- appending the replacement letter based on the new index previously calculated, once again, taking into consideration the letter casing
+- appending the replacement letter based on the new index previously calculated (once again, taking into consideration the letter casing)
 
 <br>
 
@@ -148,11 +148,11 @@ As I iterated through the message, I conducted a 2-part conditional check - firs
 
 <br>
 
-The main challenge to this cypher was repeating and reassigning the keyword. I did not want to assign a keyword character to spaces and special characters. Therefore, I had to index the keyword from within the loop. Earlier, the keyword index was set to 0. If the letter in question is a space or special character, then the keyword index remains the same. In the words, the keyword characater in sequence would only be assigned if the letter is in the alphabet. Furthermore, to cycle the keyword assignment and avoid an IndexError, I applied a modulus, of the length of the keyword, to the keyword index. 
+The main challenge to this cypher was repeating and reassigning the keyword. I did not want to assign a keyword character to spaces and special characters. Therefore, I had to index the keyword from within the loop. Earlier, the keyword index was set to 0. If the letter in question was a space or special character, then the keyword index remained the same. In other words, the keyword characater in sequence would only be assigned if the letter is in the alphabet. Furthermore, to cycle the keyword assignment and avoid an IndexError, I applied a modulus, of the length of the keyword, to the keyword index. 
 
 <br>
 
-At this point, all that was left to do was, joining the new letter replacements into one string, and ta-da! I have a new encoded (or decoded) message! Not too shabbe, eh?! What makes this cypher a tad more difficult to crack, is that each letter is shifted a different amount, whereas with the Caesar method, each letter is uniformly shifted. 
+At this point, all that was left to do was joining the new letter replacements into one string, and ta-da! I have a new cyphered message! Not too shabbe, eh?! What makes this method a tad more difficult to crack, is that each letter is shifted a different amount, whereas with the Caesar method, each letter is uniformly shifted. 
 
 <br>
 
