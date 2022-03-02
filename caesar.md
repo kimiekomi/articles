@@ -117,6 +117,10 @@ At this point in the process, all I had to do was apply the offset value to the 
 ```
 <br> 
 
+After obtaining the new index, it was simply a matter of indexing in the appropriate string (upper or lower case letters) to find the new replacement letter. I used the join() method to combine all the letters into one string, and voila! I end up with a new message, with all its letters shifted by the offset value. 
 
+<br>
+
+So there you have it, folks - a simple Caesar cypher written in Python! In my next article, I will review my Vigenere cypher code, which is based off the Caesar method, but has a couple extra layers of complexity to it. The entirety of my Caesar cypher code is available on [GitHub](https://github.com/kimiekomi/code_crack). Thanks for reading and as always, Happy Coding!
 
 <br>
