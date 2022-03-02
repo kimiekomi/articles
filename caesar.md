@@ -117,7 +117,7 @@ At this point in the process, all I had to do was apply the offset value to the 
 ```
 <br> 
 
-After obtaining the new index, it was simply a matter of indexing in the appropriate string (upper or lower case letters) to find the new replacement letter. I used the join() method to combine all the letters into one string, and voila! I end up with a new message, with all its letters shifted by the offset value. 
+After obtaining the new index, it was simply a matter of indexing into the appropriate string variable (upper or lower case letters) to find the new replacement letter. I used the join() method to combine all the letters into one string, and voila! I end up with a new message, with all its letters shifted by the predetermined offset value. 
 
 <br>
 
