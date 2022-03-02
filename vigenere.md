@@ -128,7 +128,7 @@ As I iterated through the message, I conducted a 2-part conditional check - firs
 
 <br>
 
-### Step 6: Repeat the keyword
+### Step 6: Repeat the keyword and obtain replacement letter
 <br>
 
 ```python
@@ -138,19 +138,6 @@ As I iterated through the message, I conducted a 2-part conditional check - firs
         if keyword_index >= len(keyword):
             keyword_index = keyword_index % len(keyword)
 
-```
-
-<br>
-
-The main challenge to this cypher was repeating and reassigning the keyword. I did not want to assign a keyword character to spaces and special characters. Therefore, I had to index the keyword from within the loop. Earlier, the keyword index was set to 0. If the letter in question is a space or special character, then the keyword index remains the same. In the words, the keyword characater in sequence would only be assigned if the letter is in the alphabet. Furthermore, to cycle the keyword assignment and avoid an IndexError, I applied a modulus, of the length of the keyword, to the keyword index. 
-
-<br>
-
-### Step 7: Repeat the keyword
-<br>
-
-```python
-
         new_message = "".join(new_message)
         
     if debug: print(f"new_message - '{new_message}'")
@@ -158,6 +145,10 @@ The main challenge to this cypher was repeating and reassigning the keyword. I d
     return new_message
 
 ```
+
+<br>
+
+The main challenge to this cypher was repeating and reassigning the keyword. I did not want to assign a keyword character to spaces and special characters. Therefore, I had to index the keyword from within the loop. Earlier, the keyword index was set to 0. If the letter in question is a space or special character, then the keyword index remains the same. In the words, the keyword characater in sequence would only be assigned if the letter is in the alphabet. Furthermore, to cycle the keyword assignment and avoid an IndexError, I applied a modulus, of the length of the keyword, to the keyword index. 
 
 <br>
 
