@@ -23,7 +23,7 @@ I will share how I handled each challenge below. So without furuther ado, let's 
 ### Step 1: Define function with parameters
 <br>
 
-```
+```python
 
 def caesar_cypher(message, offset, action):
     if debug: print(f"caesar_cypher() with offset - {offset}")
@@ -48,7 +48,7 @@ Right from the start I decided to handle cypher directions by passing in a separ
 ### Step 2: Iterate through each letter
 <br>
 
-```
+```python
 
     new_message = []
 
@@ -78,7 +78,7 @@ Next, I created an empty list (because lists are easier to manipulate than strin
 ### Step 3: Calculate new index 
 <br>
 
-```
+```python
 
             new_index = old_index + (offset % 26)
 
@@ -100,7 +100,7 @@ At this point in the process, all I had to do was apply the offset value to the 
 ### Step 4: Append replacement letter to list 
 <br>
 
-```
+```python
 
             if letter.isupper():
                 new_message.append(upper_letters[new_index])
