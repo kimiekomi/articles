@@ -11,3 +11,13 @@ This article will provide an in-depth explanation of Git and its many useful com
 
 <br>
 
+### What is Git?
+<br>
+
+Before we dive into any subject matter, we first must ask ourselves two imperative questions - "What is it?" and "Why do I need to learn it?". 
+
+<br>
+
+Simply put, Git is a version control tool that manages file and code revisions. In other words, Git is a system that maintains a history of your code edits by tracking and storing changes you make to your code. It is imperative for you to be proficient with Git because:
+
+- 
