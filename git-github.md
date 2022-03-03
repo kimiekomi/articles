@@ -40,18 +40,21 @@ Firstly, although the name may be misleading, Git is NOT short for GitHub. While
 
 <br>
 
-Secondly, many of Git's commands involves retreiving or releasing files between GitHub and your local machine. A "local" repository resides offline on a computer, whereas a "remote" repository resides online in GitHub. A repository may reside in either locations or both at any given time. One of Git's main functions includes syncing the two (local and remote) versions of your files, and we will discuss those commands in detail later on. 
+Secondly, many of Git's commands involves retreiving or releasing files between GitHub and your local machine. A "local" repository resides offline on a computer, whereas a "remote" repository resides online in GitHub. A repository may reside in either locations or both at any given time. One of Git's main functions includes synchronizing the two versions of your files (local and remote) which we will discuss in detail later on. 
 
 <br>
 
 ### Getting Started
 <br>
 
-In order to begin, you will need a:
+In order to begin, you need to:
 
-- code editor
-- command line interface 
-- [GitHub](https://github.com/) account 
+- install [Git](https://git-scm.com/downloads),
+- create a [GitHub](https://github.com/) account,
+- open a code editor, and
+- open a command line interface (often referred to as the command line or terminal). 
+  
+From your terminal (assuming you have a basic understanding of the command line), navigate to a folder that contains files you wish to conduct version control with and upload to GitHub. Please note that, for organization purposes, each of your projects should reside in a separate folder. After navigating to said folder, initialize your project by running ```git init``` which will alert Git to listen for file changes in this folder. This command will create a .git (hidden) directory that stores the metadata and files with your saved code changes. If you wish to change the root directory of your Git repository, simply move this .git directory to the desired folder. If you want to undo the initialization of your project entirely, simply remove this .git directory. Please note that, removing the .git directory is irreversible and will discards any changes that are not in a remote repository. 
 
 <br>
 
