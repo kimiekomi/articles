@@ -52,7 +52,32 @@ In order to begin, you need to:
 - install [Git](https://git-scm.com/downloads),
 - create a [GitHub](https://github.com/) account,
 - open a code editor, and
-- open a command line interface (often referred to as the command line or terminal). 
+- open a command line interface (often referred to as the command line or terminal) and be sure to understand the basic prompts.
+
+<br>
+
+### Setup and Configuration
+<br>
+
+After you have installed Git, provide a username and email (for Git to identify you as the author on future commands) by running the following commands:
+
+```
+
+$ git config --global user.name "Jane Doe"
+$ git config --global user.email "jane_doe@company.com"
+
+```
+
+Security is of the utmost importance with Git and GitHub. Therefore, you need to generate an SSH key to authenticate and connect your local machine to GitHub. Fortunately, GitHub offers detailed documentation and assistance on [checking](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) for an existing key, [generating](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) a new key, and [adding](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) the new key to GitHub. 
+
+<br>
+
+Now that you have completed these steps, you are *finally* ready to use Git and GitHub...phew!
+
+<br>
+
+### Git Commands
+<br>
   
 From your terminal (assuming you have a basic understanding of the command line), navigate to a folder that contains files you wish to conduct version control with and upload to GitHub. Please note that, for organization purposes, each of your projects should reside in a separate folder. After navigating to said folder, initialize your project by running ```git init``` which will alert Git to listen for file changes in this folder. This command will create a .git (hidden) directory that stores the metadata and files with your saved code changes. If you wish to change the root directory of your Git repository, simply move this .git directory to the desired folder. If you want to undo the initialization of your project entirely, simply remove this .git directory. Please note that, removing the .git directory is irreversible and will discards any changes that are not in a remote repository. 
 
