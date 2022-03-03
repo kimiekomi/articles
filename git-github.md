@@ -16,8 +16,6 @@ This article will provide an in-depth explanation of Git and its many useful com
 
 Before we dive into any subject matter, we first must ask ourselves two imperative questions - "What is it?" and "Why do I need to learn it?". 
 
-<br>
-
 Simply put, Git is a version control tool that manages file and code revisions. In other words, Git is a system that maintains a history of your code edits by tracking and storing changes you make to your code. Git has become the most commonly used and expected version control system in the industry. Therefore, it is just crucial to learn Git as it is to learn a programming language. Moreover, as a developer, it is imperative for you to be proficient with Git because Git provides:
 
 - efficient project collaboration
@@ -31,11 +29,11 @@ Simply put, Git is a version control tool that manages file and code revisions. 
 - ability to work offline
 - and much more!
 
-So with that in mind, I want to clarify a couple distinctions that puzzled me early on, before we jump into the material.  
+Now with that in mind, I want to clarify a few terminology that puzzled me early on, before we jump into the material.  
 
 <br>
 
-### What is GitHub?
+#### Is Git and GitHub the same?
 <br>
 
 Firstly, although the name may be misleading, Git is NOT short for GitHub. While Git is a version control tool, GitHub is an online platform that is used in conjunction with Git to store remote projects (also known as "repositories" or "repos"). There are other Git repository hosting services such as GitLab, BitBucket, CodeBase, etc; however, GitHub has become the largest community website for software development and the industry standard for hosting Git repositories, so that is the platform I will be discussing in this article. 
@@ -49,5 +47,11 @@ Secondly, many of Git's commands involves retreiving or releasing files between 
 ### Getting Started
 <br>
 
+In order to begin, you will need a:
 
+- code editor
+- command line interface 
+- [GitHub](https://github.com/) account 
+
+<br>
 
