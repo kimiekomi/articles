@@ -151,4 +151,23 @@ Just as ```git reset``` reverts ```git add``` commands, you can use ```git reset
 
 <br>
 
-Up until this point, I have only shown you commands that pertain to an offline local repository. None of these operations affect an online remote repository. 
+### Git Workflow and Summary
+<br>
+
+Getting started is always the difficult part; but after the installation and initial setup, the rest is simply understanding the workflow. My Git workflow typically goes something like the following:
+
+- from code editor, create folder for project/repo
+- from terminal, ```cd``` to said folder/directory
+- from terminal, run ```pwd``` to verify proper directory
+- run ```git init``` once in appropriate directory
+- from code editor, create new file inside said folder
+- from terminal, run ```git status``` to verify file creation
+- from terminal, run ```git add .``` to stage file
+- from code editor, write/modify code
+- from terminal, run ```git status``` to verify/see file changes
+- from terminal, run ```git add .``` to stage modified file
+
+<br>
+
+That is all there is to Git on a basic or local level. Up until this point, I have only shown you commands that pertain to an offline local repository. None of the above operations affect an online remote repository. In the next article, I will discuss remote repositories on GitHub and now to navigate between the two versions. For the time being, that is all I have for you, folks! Thanks for reading and as always, Happy Coding! 
+
