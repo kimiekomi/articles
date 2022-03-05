@@ -83,10 +83,20 @@ Furthermore, if there is a repository on GitHub that is nonexistent on your loca
 
 <br>
 
-### Git Pull and Git Clone
+To take the concept of copying remote repositories one step further, ...fork
+
+<br>
+
+### Git Branch and Git Checkout (Git Switch)
 <br>
 
 
 
 <br>
 
+### Git Diff, Git Merge, and Git Rebase
+<br>
+
+
+
+<br>
