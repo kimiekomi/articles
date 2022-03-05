@@ -74,8 +74,19 @@ Furthermore, if there is a repository on GitHub that is nonexistent on your loca
 
 <br>
 
-### Git Fetch and Git Merge
+> Note: The ```git pull``` command actually combines two other git commands - ```git fetch``` and ```git merge```. If you wish to have more control over the integration process, you may want to run these two commands separately. Running ```git fetch``` on its own, will merely obtain or download the file changes from the remote repository; however, this command will not not conduct integration or make changes to local files. The ```git fetch``` command may be used in the following manner:
+>- ```git fetch``` : downloads changes from all remote branches 
+>- ```git fetch origin main``` : downloads changes from remote main branch (if upstream has not been established, then Git needs to know which remote branch to download from)
+>- ```git fetch <remote branch name> <local branch name>``` : downloads changes from a specific branch
+>
+>There is more depth to the ```git merge``` command so I will discuss this topic in a section.
+
+<br>
+
+### Git Pull and Git Clone
 <br>
 
 
+
+<br>
 
