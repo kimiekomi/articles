@@ -36,10 +36,46 @@ Afterwards, simply use the ```git push``` command to upload (also known as "push
 
 <br>
 
-> Please Note: At the initial repositiory creation, one single branch is created. Git names this single branch "master". However, due to the negative connotations around the word "master", GitHub renames this initial branch to "main". That is why on the new repository starter page, GitHub includes instructions for renaming the initial branch (shown in the image above with a red asterisk). This is an optional step and can be done at any point in workflow. If you wish to observe modern conventions and industry standards, use the ```git branch -M main``` command to change the initial branch's name from "master" to "main". 
+> Note: At the initial repositiory creation, one single branch is created. Git names this single branch "master". However, due to the negative connotations around the word "master", GitHub renames this initial branch to "main". That is why on the new repository starter page, GitHub includes instructions for renaming the initial branch (shown in the image above with a red asterisk). This is an optional step and can be done at any point in workflow. If you wish to observe modern conventions and industry standards, use the ```git branch -M main``` command to change the initial branch's name from "master" to "main". In this tutorial, I will be using the term "main" when referring to this initial branch.
 
 <br>
 
-And just like that, your local repository is now online, meaning you have a remote version of your latest commit. At this stage, if you navigate to your repository starter page, you will see that the instructions have been replaced with a list of your files. 
+And just like that, your local repository is now online, meaning you have a remote version of your latest commit. At this stage, if you navigate to your repository starter page, you will see that the instructions have been replaced with a list of your files.
 
 Please note that, the repository starter page also provides instructions on creating a new remote repository from the command line. In other words, there is a *third* method to create a remote repository, aside from accessing GitHub.com. After commiting your code to a local repository, you can simply run ```git remote add origin <SSH URL>``` and push your project straight away, without visiting GitHub.com. However, instead of memorizing the SSH URL format, I choose to simply create a new remote repository through GitHub.com and copy/paste the URL from the starter page. 
+
+<br>
+
+### Git Pull and Git Clone
+<br>
+
+Now lets explore a different scenario. You have already learned how to create a file in your code editor and push to GitHub. However, your workflow may also progress in the inverse direction. Instead of starting out from your local environment, you can also create a new file from GitHub and "pull" the changes down to your local machine. To add a new file from GitHub, simply select "creating a new file" on the starter page or the "Add file" button if the starter page was replaced with your file list (shown below in red circles). By convention, the first file in a GitHub repository is typically a README.md which contains a summarized description of your project. After creating a new file on GitHub, it is only located in your remote repository. In order to synchronize the two versions, run ```git pull``` to download all file changes in all branches (there's that term again...I promise the branch section is coming up shortly) from the remote repository and integrate them with files in your local respository. 
+
+<br>
+
+<img style="float: inline; margin: 0" width="400" height="200" src="add-file.png"> 
+<img style="float: inline; margin: 0" width="400" height="200" src="add-file2.png"> 
+
+<br>
+
+The ```git pull``` command may be used in the following manner:
+
+- ```git pull``` : pulls from all remote branches and updates all local branches (with previously established upstream between local and remote repositories)
+- ```git pull origin main``` : pulls from remote main branch and updates local main branch (if upstream has not been established, then Git needs to know which remote branch to pull from)
+- ```git pull <remote branch name> <local branch name>``` : pulls changes from a specific branch and updates specified local branch
+
+<br>
+
+Furthermore, if there is a repository on GitHub that is nonexistent on your local computer, you can pull an *entire* remote repository into your local environment by running the ```git clone <SSH URL>``` command. This command does not require you to create a project-specific folder in your code editor beforehand. Simply navigate to the desired directory, run ```git clone <SSH URL>```, and a folder by the same name as the specified remote repository will be created containting all the associated files. You can find the repository's SSH URL by navigating to the desired repository's homepage and clicking the green "Code" button (shown below with a red circle).
+
+<br>
+
+<img style="float: inline; margin: 0" width="600" height="300" src="clone-repo.png"> 
+
+<br>
+
+### Git Fetch and Git Merge
+<br>
+
+
+
