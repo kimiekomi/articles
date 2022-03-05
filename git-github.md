@@ -103,7 +103,7 @@ To utilize Git's version control system, you need to specifically instruct Git w
 
 <br>
 
-<img style="block: left; margin: 0" width="400" height="100" src="git-staged.png">
+<img style="block: left; margin: 0" width="400" height="70" src="git-staged.png">
 
 <br>
 
@@ -163,9 +163,16 @@ Getting started is always the difficult part; but after the installation and ini
 - from code editor, create new file inside said folder
 - from terminal, run ```git status``` to verify file creation
 - from terminal, run ```git add .``` to stage file
+- from termin, run ```git commit -m "initial commit``` 
 - from code editor, write/modify code
 - from terminal, run ```git status``` to verify/see file changes
-- from terminal, run ```git add .``` to stage modified file
+- from terminal, run ```git commit -am "added example function"```
+- from code editor, continue to add/modify code 
+- from terminal, run ```git status``` to verify/see file changes
+- from terminal, run ```git commit -am "added another function"```
+- ...and keep repeating the last 3 steps
+
+Finally, before my lunch break or at the end of my workday, I will "push" my local repository to GitHub, which will be our next discussion. 
 
 <br>
 
