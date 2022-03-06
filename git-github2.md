@@ -36,7 +36,7 @@ Afterwards, simply use the ```git push``` command to upload (also known as "push
 
 <br>
 
-> Note: At the initial repositiory creation, one single branch is created. Git names this single branch "master". However, due to the negative connotations around the word "master", GitHub renames this initial branch to "main". That is why on the new repository starter page, GitHub includes instructions for renaming the initial branch (shown in the image above with a red asterisk). This is an optional step and can be done at any point in workflow. If you wish to observe modern conventions and industry standards, use the ```git branch -M main``` command to change the initial branch's name from "master" to "main". In this tutorial, I will be using the term "main" when referring to this initial branch.
+> Note: At the initial repositiory creation, one single branch is created which by default becomes the HEAD branch. If you created the repository locally, Git names this local branch "master". However, if you created the repository remotely, due to the negative connotations around the word "master", GitHub names this primary remote branch "main". That is why on the new repository starter page, GitHub includes instructions to rename the primary local branch (shown in the image above with a red asterisk). This is an optional step and can be done at any point in the workflow. If you wish to observe modern conventions and industry standards, use the ```git branch -m main``` command to rename the local HEAD branch. Throughout this tutorial, I will use the term "main" to referebce the primary branch.
 
 <br>
 
