@@ -36,13 +36,11 @@ Afterwards, simply use the ```git push``` command to upload (also known as "push
 
 <br>
 
-> Note: At the initial repositiory creation, one single branch is created which by default becomes the HEAD branch. If you created the repository locally, Git names this local branch "master". However, if you created the repository remotely, due to the negative connotations around the word "master", GitHub names this primary remote branch "main". That is why on the new repository starter page, GitHub includes instructions to rename the primary local branch (shown in the image above with a red asterisk). This is an optional step and can be done at any point in the workflow. If you wish to observe modern conventions and industry standards, use the ```git branch -m main``` command to rename the local HEAD branch. Throughout this tutorial, I will use the term "main" to referebce the primary branch.
+> Note: At the initial repositiory creation, one single branch is created which by default becomes the HEAD branch. If you created the repository locally, Git names this local branch "master". However, if you created the repository remotely, due to the negative connotations around the word "master", GitHub names this primary remote branch "main". That is why on the new repository starter page, GitHub includes instructions to rename the primary local branch (shown in the image above with a red asterisk). This is an optional step and can be done at any point in the workflow. If you wish to observe modern conventions and industry standards, use the ```git branch -m main``` command to rename the local HEAD branch. Throughout this tutorial, I will use the term "main" to reference the primary branch.
 
 <br>
 
 And just like that, your local repository is now online, meaning you have a remote version of your latest commit. At this stage, if you navigate to your repository starter page, you will see that the instructions have been replaced with a list of your files.
-
-Please note that, the repository starter page also provides instructions on creating a new remote repository from the command line. In other words, there is a *third* method to create a remote repository, aside from accessing GitHub.com. After commiting your code to a local repository, you can simply run ```git remote add origin <SSH URL>``` and push your project straight away, without visiting GitHub.com. However, instead of memorizing the SSH URL format, I choose to simply create a new remote repository through GitHub.com and copy/paste the URL from the starter page. 
 
 <br>
 
