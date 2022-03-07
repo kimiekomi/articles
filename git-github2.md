@@ -68,7 +68,7 @@ Furthermore, if there is a repository on GitHub that is nonexistent on your loca
 
 <br>
 
-<img style="float: inline; margin: 0" width="600" height="300" src="images/clone-repo.png"> 
+<img style="float: block; margin: 0" width="600" height="300" src="images/clone-repo.png"> 
 
 <br>
 
@@ -85,7 +85,7 @@ Another method to copy remote repositories, is through GitHub's "fork" procedure
 
 <br>
 
-<img style="float: inline; margin: 0" width="600" height="300" src="images/github-fork.png"> 
+<img style="float: block; margin: 0" width="600" height="300" src="images/github-fork.png"> 
 
 <br>
 
@@ -108,6 +108,10 @@ Branches can only be created locally, then uploaded to a remote repository. To c
 
 <br>
 
+<img style="float: block; margin: 0" width="600" height="300" src="images/branch.png"> 
+
+<br>
+
 - ```git branch -d <branch name>``` : deletes specified local branch (must be on different branch than the one removing)
 - ```git push origin --delete <branch name>``` : deletes specified remote branch
 - ```git branch --track <branch name>``` : downloads specified remote branch onto local machine and instructs HEAD branch to track and alert of any changes in specifed branch 
@@ -119,11 +123,28 @@ There are two methods to navigate from one branch to another - ```git switch <br
 
 - ```git checkout -b <new branch name>``` : creates new branch and navigate to the new branch
 - ```git checkout --track <branch name>``` : downloads specified remote branch onto local machine and instructs HEAD branch to track and alert of any changes in specifed branch (accomplishes same tasks as ```git branch --track <branch name>```)
-- ```git checkout <hashvalue>``` : navigates to specified commit
+- ```git checkout <hashcode>``` : navigates to specified commit
 
 <br>
 
-Please note that, using the ```git checkout <hashvalue>``` command will leave you in a "detached HEAD" state. Earlier in this 
+Please note that, using the ```git checkout <hashcode>``` command will leave you in a "detached HEAD" state. In part 1 of my Git article, I fundamentally defined HEAD as the current, active, or working directory in Git. To expand on that rudimentary definition, not only does HEAD point to the current branch, it also *always* points specifically to the *latest commit* in the active branch. The ```git checkout <branch name> command automatically moves the HEAD pointer to the newest commit on the specified branch. However, the ```git checkout <hashcode>```, command moves the HEAD pointer to a previous commit (without designating the specified commit as the new HEAD), thereby "detaching" the head from the tip of the active branch. This command will only allow users to *view* a prior revision and will not revert the file to a prior state. Commits are disabled in a detached head state, making it treacherous territory to be in. Code revisions made in a detached head state cannot be saved, as they do not belong to any branches; when you eventually switch to a different branch, these changes will be lost. To exit the detached head state, you have two choices: 
+
+1. checkout or navigate back to the previous branch 
+2. create and navigate to a new local branch from this point
+
+<br>
+
+<img style="float: inline; margin: 0" width="450" height="250" src="images/before-checkout.png"> 
+<img style="float: inline; margin: 0" width="450" height="250" src="images/after-checkout.png"> 
+
+<br>
+
+This is not to be confused with ```git reset <hashcode>``` which effectively labels a prior commit as the new HEAD, *removes/reverses* any revisions after the specified commit, and moves the end of the branch to the specified point; thereby, maintaining an "attached" HEAD state. 
+
+<br>
+
+<img style="float: inline; margin: 0" width="450" height="250" src="images/before-reset.png"> 
+<img style="float: inline; margin: 0" width="450" height="250" src="images/after-reset.png"> 
 
 <br>
 
