@@ -2,7 +2,7 @@
 <br>             
 
 <div align="center">
-<img style="float: block; margin: 0" width="400" height="200" src="git-image.png"> 
+<img style="float: block; margin: 0" width="400" height="200" src="images/git-image.png"> 
 </div>
 
 <br>
@@ -90,7 +90,7 @@ After initializing your project, you will notice that changes you make to a file
 
 <br>
 
-<img style="block: left; margin: 0" width="400" height="100" src="git-untracked.png">
+<img style="block: left; margin: 0" width="400" height="100" src="images/git-untracked.png">
 
 <br>
 
@@ -103,7 +103,7 @@ To utilize Git's version control system, you need to specifically instruct Git w
 
 <br>
 
-<img style="block: left; margin: 0" width="400" height="70" src="git-staged.png">
+<img style="block: left; margin: 0" width="400" height="70" src="images/git-staged.png">
 
 <br>
 
@@ -138,7 +138,7 @@ If you wish to view a list of prior commits, the ```git log``` command will disp
 
 <br>
 
-<img style="block: left; margin: 0" width="400" height="200" src="git-log.png">
+<img style="block: left; margin: 0" width="400" height="200" src="images/git-log.png">
 
 <br>
 

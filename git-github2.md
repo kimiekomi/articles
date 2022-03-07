@@ -2,7 +2,7 @@
 <br>             
 
 <div align="center">
-<img style="float: block; margin: 0" width="400" height="200" src="github-image.jpeg"> 
+<img style="float: block; margin: 0" width="400" height="200" src="images/github-image.jpeg"> 
 </div>
 
 <br>
@@ -20,7 +20,7 @@ Let's say, at the end of your workday, after you have commited your work to a lo
 
 <br>
 
-<img style="float: block; margin: 0" width="600" height="200" src="new-repo.png"> 
+<img style="float: block; margin: 0" width="600" height="200" src="images/new-repo.png"> 
 
 <br>
 
@@ -28,7 +28,7 @@ Enter a name for your new repository, select the green "Create repository" butto
 
 <br>
 
-<img style="float: block; margin: 0" width="600" height="300" src="repo-home.png"> 
+<img style="float: block; margin: 0" width="600" height="300" src="images/repo-home.png"> 
 
 <br>
 
@@ -51,8 +51,8 @@ Now lets explore a different scenario. You have already learned how to create a 
 
 <br>
 
-<img style="float: inline; margin: 0" width="400" height="200" src="add-file.png"> 
-<img style="float: inline; margin: 0" width="400" height="200" src="add-file2.png"> 
+<img style="float: inline; margin: 0" width="400" height="200" src="images/add-file.png"> 
+<img style="float: inline; margin: 0" width="400" height="200" src="images/add-file2.png"> 
 
 <br>
 
@@ -68,7 +68,7 @@ Furthermore, if there is a repository on GitHub that is nonexistent on your loca
 
 <br>
 
-<img style="float: inline; margin: 0" width="600" height="300" src="clone-repo.png"> 
+<img style="float: inline; margin: 0" width="600" height="300" src="images/clone-repo.png"> 
 
 <br>
 
@@ -81,7 +81,11 @@ Furthermore, if there is a repository on GitHub that is nonexistent on your loca
 
 <br>
 
-To take the concept of copying remote repositories one step further, ...fork
+Another method to copy remote repositories, is through GitHub's "fork" procedure. This practice is used to copy another developer's entire repository onto your own GitHub account which will provide you complete access or control to make changes to the repository. On the desired repository's homepage, simply click the gray "Fork" button on the upper right corner of the window (shown below by the red circle). And just like that, you now have an entire remote copy of the repository available under your account.  
+
+<br>
+
+<img style="float: inline; margin: 0" width="600" height="300" src="images/github-fork.png"> 
 
 <br>
 
