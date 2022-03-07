@@ -151,6 +151,6 @@ This is not to be confused with ```git reset <hashcode>``` which effectively lab
 ### Git Diff, Git Merge, and Git Rebase
 <br>
 
-
+Typically, projects have a main branch which only contains production ready code. All other branches are for development or code in progress. Once work on a branch is complete, they will be integrated with the main branch.  
 
 <br>
