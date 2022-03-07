@@ -129,6 +129,14 @@ In Git, a "commit" is essentially a snapshot of file changes and represents a ve
 
 <br>
 
+To remove files from a local Git repository, run the ```git rm```command. However, please note that, running this command will also remove the specified file from the *filesystem*. If this is not your intention, then simply make a copy of the file before removing from Git. The ```git rm``` command may be used in the following manners:
+
+- ```git rm <filename>``` : removes specified file from the repository
+- ```git rm <prefix>.*``` : removes any files with specified prefix
+- ```git rm *.<extension>``` : removes any files with specified extension
+
+<br>
+
 If you wish to view a list of prior commits, the ```git log``` command will display a history of all commits made to the repository, in reverse chronological order. This log will include the 40-character commit id, author, datetime stamp, and the commit message previously included. Please note that, it is best practice for commit messages to be descriptive for easier version recognition. The ```git log``` may be used in the following manner:
 
 - ```git log``` : lists history of all commits in repository with all associated data
