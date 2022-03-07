@@ -85,7 +85,7 @@ From your terminal (assuming you have a basic understanding of the command line)
 
 <br>
 
-## Git Status and Git Add
+### Git Status and Git Add
 <br>
 
 After initializing your project, you will notice that changes you make to a file in that directory will be prompt an alert from Git. At this phasse in the workflow, if you run ```git status```, you will see a list of modified files under "Untracked files: " in red text. An "untracked" file indicates that Git has not yet been informed of the specified file's existence. 
