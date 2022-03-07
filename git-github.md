@@ -68,7 +68,9 @@ $ git config --global user.email "jane_doe@company.com"
 
 ```
 
-Security is of the utmost importance with Git and GitHub. Therefore, you need to generate an SSH key to authenticate and connect your local machine to GitHub. Fortunately, GitHub offers detailed documentation and assistance on [checking](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) for an existing key, [generating](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) a new key, and [adding](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) the new key to GitHub. 
+Security is of the utmost importance, especially with respect to data transfer operations. GitHub offers two types of secure internet communication protocols - HTTPS and SSH. HTTPS is easy to use, more widely accessible, and requires little setup. However, using HTTPS requires repetitive authentication, meaning developers must enter their credentials with each command. On the other hand, SSH requires foundational setup (which involves a multi-step process) but is inherently more secure than HTTPS and eliminates recurring password verifications. 
+
+In order to use SSH protocols, you need to generate an SSH key to authenticate and connect your local machine to GitHub. This process removes the need for password retention by creating both a private and a public key which are then used for identity validation. Fortunately, GitHub offers detailed documentation and assistance on [checking](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) for an existing key, [generating](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) a new key, and [adding](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) the new key to GitHub. 
 
 <br>
 
@@ -129,14 +131,6 @@ In Git, a "commit" is essentially a snapshot of file changes and represents a ve
 
 <br>
 
-To remove files from a local Git repository, run the ```git rm```command. However, please note that, running this command will also remove the specified file from the *filesystem*. If this is not your intention, then simply make a copy of the file before removing from Git. The ```git rm``` command may be used in the following manners:
-
-- ```git rm <filename>``` : removes specified file from the repository
-- ```git rm <prefix>.*``` : removes any files with specified prefix
-- ```git rm *.<extension>``` : removes any files with specified extension
-
-<br>
-
 If you wish to view a list of prior commits, the ```git log``` command will display a history of all commits made to the repository, in reverse chronological order. This log will include the 40-character commit id, author, datetime stamp, and the commit message previously included. Please note that, it is best practice for commit messages to be descriptive for easier version recognition. The ```git log``` may be used in the following manner:
 
 - ```git log``` : lists history of all commits in repository with all associated data
@@ -156,6 +150,14 @@ Just as ```git reset``` reverts ```git add``` commands, you can use ```git reset
 - ```git reset HEAD~1``` : reverses the commit prior to the last commit
 - ```git reset <hashcode>``` : reverses file version to specified commit id
 - ```git reset --hard <hashcode>``` : reverses multiple commits and resets current version (or HEAD) to specified commit
+
+<br>
+
+To completely remove files from a local Git repository, run the ```git rm```command. However, please note that, running this command will also remove the specified file from the *filesystem*. If this is not your intention, simply make a copy of the file before removing it from Git. The ```git rm``` command may be used in the following manners:
+
+- ```git rm <filename>``` : removes specified file from the repository
+- ```git rm <prefix>.*``` : removes any files with specified prefix
+- ```git rm *.<extension>``` : removes any files with specified extension
 
 <br>
 
