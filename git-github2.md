@@ -148,9 +148,12 @@ This is not to be confused with ```git reset <hashcode>``` which effectively lab
 
 <br>
 
-### Git Diff, Git Merge, and Git Rebase
-<br>
-
-Typically, projects have a main branch which only contains production ready code. All other branches are for development or code in progress. Once work on a branch is complete, they will be integrated with the main branch.  
+Once you have successfully created a new branch, simply use the basic Git commands (i.e. status, add, commit, push, etc.) as you normally would on a main branch. Typically, a project's main branch strictly ontains production-ready code. All other branches are reserved for code in progress or development. Keep in mind that, as the main branch continues to progress and acquire more commits from other developers, you may need to run ```git pull``` on your main branch to obtain the project's latest revision. Once a development branch is complete, it is then integrated with the main branch. This will be the topic of discussion for my next Git article; for now, pat yourself on the back, you've made it this far!
 
 <br>
+
+### Summary
+<br>
+
+This article introduced a few intermediate Git concepts and operations which means you are well on your way to understanding Git in its entirety. I will let you percolate on all this newly acquired knowledge before proceeding to the next topic of discussion. For the time being, that is all I have for you fine folks! Thanks for reading and as always, Happy Coding! 
+
