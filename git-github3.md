@@ -16,7 +16,7 @@ So without further adieu, let's immerse into the world of Git and GitHub!
 ### Git Diff, Git Merge, and Git Rebase
 <br>
 
-fd
+To incorporate two different branches, use the ```git merge <branch name>``` command. Please note that, you must first be in the "receiver" branch then provide the giver branch's name when running ```git merge <branch name>```. 
 
 <br>
 
