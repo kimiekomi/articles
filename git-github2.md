@@ -161,9 +161,10 @@ One last topic...I almost forgot to mention one rather useful Git operation. The
 - compiled code, such as .o, .pyc, and .class files
 - build output directories, such as /bin, /out, or /target
 - files generated at runtime, such as .log, .lock, or .tmp
-- hidden operatin system files, such as .DS_Store or Thumbs.db
+- hidden operating system files, such as .DS_Store or Thumbs.db
 - personal IDE config files, such as .idea/workspace.xml
-- application generated files (![GitHub](https://github.com/github/gitignore/tree/main/Global)) actually am
+- application generated files, such as .history/ or .sublime-workspace ([GitHub](https://github.com/github/gitignore/tree/main/Global) recommended .gitignore files) 
+- language and framework required files such as npm-debug.log or .sass-cache
 
 ### Summary
 <br>
