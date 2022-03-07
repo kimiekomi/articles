@@ -109,7 +109,7 @@ To utilize Git's version control system, you need to specifically instruct Git w
 
 <br>
 
-Modified or new files in the staging area, are now considered "tracked" files and will appear in green text if you run ```git status``` once more. In other words, Git will only perform version control on staged/tracked files. Please note that, if you make changes to staged files, you will need to re-add them to the index; otherwise, Git will not be aware of the subsequent changes. If you modified files that have already been staged, and run ```git status```, those files will reappear in red text which indicates there are additional file changes that have not been staged. This is because the ```git status``` command merelycompares the files in the HEAD (also known as the current, active, or working directory) versus files in the index. 
+Modified or new files in the staging area, are now considered "tracked" files and will appear in green text if you run ```git status``` once more. In other words, Git will only perform version control on staged/tracked files. Please note that, if you make changes to staged files, you will need to re-add them to the index; otherwise, Git will not be aware of the subsequent changes. If you modified files that have already been staged, and run ```git status```, those files will reappear in red text which indicates there are additional file changes that have not been staged. This is because the ```git status``` command merely compares the files in the HEAD (also known as the current, active, or working directory) versus files in the index. 
 
 <br>
 

@@ -36,7 +36,7 @@ Afterwards, simply use the ```git push``` command to upload (also known as "push
 
 <br>
 
-> Note: At the initial repositiory creation, one single branch is created which by default becomes the HEAD branch. If you created the repository locally, Git names this local branch "master". However, if you created the repository remotely, due to the negative connotations around the word "master", GitHub names this primary remote branch "main". That is why on the new repository starter page, GitHub includes instructions to rename the primary local branch (shown in the image above with a red asterisk). This is an optional step and can be done at any point in the workflow. If you wish to observe modern conventions and industry standards, use the ```git branch -m main``` command to rename the local HEAD branch. Throughout this tutorial, I will use the term "main" to reference the primary branch.
+> Note: At the initial repositiory creation, one single branch is created which by default becomes the HEAD branch. If you created the repository locally, Git names this primary local branch "master". However, if you created the repository remotely, due to the negative connotations around the word "master", GitHub names this primary remote branch "main". That is why on the new repository starter page, GitHub includes instructions to rename the default local branch (shown in the image above with a red asterisk). This is an optional step and can be done at any point in the workflow. If you wish to observe modern conventions and industry standards, use the ```git branch -m main``` command to rename the local HEAD branch. Throughout this tutorial, I will use the term "main" to reference the primary branch.
 
 <br>
 
@@ -81,7 +81,7 @@ Furthermore, if there is a repository on GitHub that is nonexistent on your loca
 
 <br>
 
-Another method to copy remote repositories, is through GitHub's "fork" procedure. This practice is used to copy another developer's entire repository onto your own GitHub account which will provide you complete access or control to make changes to the repository. On the desired repository's homepage, simply click the gray "Fork" button on the upper right corner of the window (shown below by the red circle). And just like that, you now have an entire remote copy of the repository available under your account.  
+Another method to copy remote repositories, is through GitHub's "fork" procedure. This practice is used to copy another developer's entire repository onto your own GitHub account which will provide you complete access or control to make changes to the repository. On the desired repository's homepage, simply click the gray "Fork" button on the upper right corner of the window (shown below by the red circle). And just like that, you now have an entire remote copy of the repository available under your account name.  
 
 <br>
 
@@ -92,7 +92,38 @@ Another method to copy remote repositories, is through GitHub's "fork" procedure
 ### Git Branch and Git Checkout (Git Switch)
 <br>
 
+Similar to how commits are snapshots of a particular code revision, branches also represent a separate version of the code and is applied to the entire repository. However, the key difference is that branches contain a *series* of commits that lead to the current state, whereas a commit is merely the *latest* revision of the codebase. Alternatively, a branch is a pointer to a particular commit or location where a subsequent commit sequence may begin. At the initial creation of a branch, it is merely an exact replica of the main branch. However, as the new branch acquires its own commit history, the new branch starts to form a life of its own, separate from the main branch. Branching allows developers in collaboration to work on various aspects of the code in parallel without disrupting one another's work. With the creation of branches, a repository can be seen as a tree of commits (or versions), with parellel branches (or tracks) diverging from various commits (or renditions of the project). Capiche?
 
+Branches can only be created locally, then uploaded to a remote repository. To create a new branch, use the ```git branch``` command in the following manner:
+
+- ```git branch``` : lists all branches and indicates HEAD branch with green text and asterisk 
+- ```git branch <new branch name>``` : creates new local branch with specified name, off latest commit
+- ```git branch <new branch name> <hashcode>``` : creates new local branch with specified name, based on specified revision of code
+- ```git branch -m <new branch name>``` : renames HEAD branch 
+- ```git branch -m <branch name> <new branch name>``` : renames non-HEAD branch 
+
+<br>
+
+>Note: Branch names may not be duplicated. Using ```-M``` (with a capital "M") forces a name change despite branch name conflicts, and the local branch being renamed will override the existing local branch. This may result in the unintended removal of the existing local branch. There is no Git command to rename a remote branch. To do so, delete the remote branch in question, and upload a new branch with the desired branch name. When deleting a remote branch, it is best practice to also delete its counterpart local branch to avoid clutter and confusion. 
+
+<br>
+
+- ```git branch -d <branch name>``` : deletes specified local branch (must be on different branch than the one removing)
+- ```git push origin --delete <branch name>``` : deletes specified remote branch
+- ```git branch --track <branch name>``` : downloads specified remote branch onto local machine and instructs HEAD branch to track and alert of any changes in specifed branch 
+- ```git branch --track <new local branch name> <existing remote branch name>``` : creates new branch in local machine based on specified remote branch (which does not currently reside in local machine) and sets tracking connection between the two 
+
+<br>
+
+There are two methods to navigate from one branch to another - ```git switch <branch name>``` and ```git checkout <branch name>```. The ```git switch``` command is palpable and accomplishes one task only - changing the HEAD branch to the specified branch. However, the ```git checkout``` command is more complicated and can also be used in the following manner:
+
+- ```git checkout -b <new branch name>``` : creates new branch and navigate to the new branch
+- ```git checkout --track <branch name>``` : downloads specified remote branch onto local machine and instructs HEAD branch to track and alert of any changes in specifed branch (accomplishes same tasks as ```git branch --track <branch name>```)
+- ```git checkout <hashvalue>``` : navigates to specified commit
+
+<br>
+
+Please note that, using the ```git checkout <hashvalue>``` command will leave you in a "detached HEAD" state. Earlier in this 
 
 <br>
 
