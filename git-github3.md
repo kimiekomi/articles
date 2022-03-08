@@ -13,10 +13,19 @@ So without further adieu, let's immerse into the world of Git and GitHub!
 
 <br>
 
-### Git Diff, Git Merge, and Git Rebase
+### Git Merge and Git Rebase
 <br>
 
-To incorporate two different branches, use the ```git merge <branch name>``` command. Please note that, you must first be in the "receiver" branch then provide the giver branch's name when running ```git merge <branch name>```. 
+To incorporate two different branches, use the ```git merge <branch name>``` command. Please note that, you must switch to the "receiving" branch then provide the "giving" branch's name (the branch with the code modifications) when running ```git merge <branch name>```. You may also combine the two commands into one command by running ```git merge <giving branch name> <receiving branch name>``` without having to checkout a branch beforehand. Both of the above commands will generate a new merge-commit in the development branch and Git will then seamlessly integrate the changes from one branch into the other. 
+
+<br>
+
+Another method to consolidate two branches, is through the ```git rebase <branch name>``` command (in this case, navigate to the *giving* branch then specify the *receiving* branch's name). This command will also integrate changes from one branch into the HEAD branch. However, instead of converging with the main branch at the HEAD, ```git rebase <branch name>``` will simply take all the commits in the development branch and append them to the HEAD. This method is less popular because it creates new commits for each prior commit in the main branch, thereby rewriting history in a sense. The main benefit to rebasing, is a cleaner or simpler project history. In other words, after rebasing, the git log will depict commits as one linear line, as if branching and reintegration did not occur.
+
+<br>
+
+<img style="float: inline; margin: 0" width="400" height="200" src="images/after-merge.png"> 
+<img style="float: inline; margin: 0" width="400" height="200" src="images/after-rebase.png"> 
 
 <br>
 
