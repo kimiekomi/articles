@@ -29,7 +29,7 @@ Another method to consolidate two local branches, is through the ```git rebase <
 
 <br>
 
-merge canflict
+merge canflict 456
 
 <br>
 
