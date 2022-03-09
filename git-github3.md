@@ -29,11 +29,18 @@ Another method to consolidate two local branches, is through the ```git rebase <
 
 <br>
 
-merge conflict...resolve conflict and add/commit again
+Git is able to easily and efficiently handle branch integration when there are no disparities between branches. However, attempting to merge files that contain code discrepancies will result in a "merge conflict" which occurs when Git is unable to automatically resolve and merge code differences. Merge conflicts arise when two branches have competing changes to the same line of code or when a file has been deleted from one branch but not the other. These circumstances require developers to resolve the conflict (and commit the changes) before Git can proceed with the merge.   
 
 <br>
 
 <img style="float: block; margin: 0" width="500" height="50" src="images/merge-conflict.png"> 
+
+<br>
+
+In the event of a merge conflict, the ```git status``` command will disclose which file contains the discrepancy. Furthermore, when you open the specified file in a code editor, Git will indicate the exact line(s) with the code disparity within a series of arrows. To resolve the conflict, modify the specified line(s), remove the lines with the associated arrows, then stage and commit the new changes to finalize the merge process. 
+
+<br>
+
 <img style="float: block; margin: 0" width="400" height="100" src="images/editor-conflict.png"> 
 
 <br>
@@ -48,6 +55,16 @@ Merging and rebasing both occur on the local level, and as usual, changes can be
 3) Select two branches to compares
 4) Click on the gree "Create pull request" button
 
-If you are the project lead, at this point, you will see a list of pull requests on the repository's pull request page. Simply select the particular pull request you wish to review, then at the bottom of the page, you can click on the green drop-down menu button to select whether you want to perform a merge or a rebase. Then further down the page, click on the green "Confirm" button, and you will have successfuly integrated the two branches.  
+If you are the project lead, at this point, you will see a list of pull requests on the repository's pull request page. Simply select the particular pull request you wish to review, then at the bottom of the page, you can click on the green drop-down menu button to select whether you want to perform a merge or a rebase. Then further down the page, click on the green "Confirm" button, and you will have successfuly integrated the two branches. For more information on this process, [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) provides detailed descriptions of their pull-request processes. 
 
 <br>
+
+### Git Diff
+<br>
+
+When workingw with multiple branche, another useful command to incorporate into your workflow is the ```git diff``` command which is used to view variations between files, branches, or even commits. The ```git diff``` command may be used in the following manner:
+
+- 
+
+<br>
+
