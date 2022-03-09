@@ -29,7 +29,7 @@ Another method to consolidate two local branches, is through the ```git rebase <
 
 <br>
 
-Some developers may choose to be more involved with the rebase process by rebasing in interactive mode. Interactive rebase provides users more control over a branch's commit hisotry by performing dedicated actions on individual commits. To enter interactive mode, run the ```git rebase -i <branch name>``` command (with the receiving branch's name). Git will then open a text editor with a list of all the commits that will be moved to the receiving branch. At this point, you have several to perform which include:
+Some developers may choose to be more involved with the rebase process by rebasing in interactive mode. Interactive rebase provides users more control over a branch's commit hisotry by performing dedicated actions on individual commits. To enter interactive mode, run the ```git rebase -i <branch name>``` command (with the receiving branch's name). Git will then open a text editor with a list of all the commits that will be moved to the receiving branch. At this point, you have several commit altering options, including:
 
 - ```p <commit>``` : (pick) use commit 
 - ```r <commit>``` : (reword) use commit change commit message
@@ -37,6 +37,10 @@ Some developers may choose to be more involved with the rebase process by rebasi
 - ```d <commit>``` : (drop) remove commit
 - ```s <commit>``` : (squash) use commit and combine with previous commit 
 - ```f <commit>``` : (fixup) same as squash but removes second commit message
+
+<br>
+
+Entered the desired options and Git will perform the rebase based on your instructions. Keep in mind that, ```git rebase``` generates new commits; therefore, always rebase a development branch onto a main branch. If you conducted the opposite and rebased main onto a development branch, this will cause a disruption in all other collaborating developer's repositories. 
 
 <br>
 
@@ -59,20 +63,6 @@ In the event of a merge conflict, the ```git status``` command will disclose whi
 
 <br>
 
-### GitHub Pull Request
-<br>
-
-Merging and rebasing both occur on the local level, and as usual, changes can be pushed to a remote repository to synchronize the two versions. However, after a development branch is completed and pushed to a remote repository, branch incorporation may also materialize on the remote level. Projects typically have one lead or senior developer who maintains full control over the entire repository. Thus, if you do not own the respository, you cannot integrate a development branch into the main branch without explicit permission. In GitHub, this is achieved by generating a "pull request" which allows collaborating developers to review (and provide feedback on) your code changes before incorporating them into the main branch. You may conduct a pull request by following the steps below.
-
-1) Select "pull request" on the repository's navigation bar  
-2) Click on the green "New pull request" button
-3) Select two branches to compares
-4) Click on the gree "Create pull request" button
-
-If you are the project lead, at this point, you will see a list of pull requests on the repository's pull request page. Simply select the particular pull request you wish to review, then at the bottom of the page, you can click on the green drop-down menu button to select whether you want to perform a merge or a rebase. Then further down the page, click on the green "Confirm" button, and you will have successfuly integrated the two branches. For more information on this process, [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) provides detailed descriptions of their pull-request processes. 
-
-<br>
-
 ### Git Diff
 <br>
 
@@ -85,4 +75,16 @@ When workingw with multiple branche, another useful command to incorporate into 
 - ```git diff <branch name> <other branch name> <filename>``` : compares changes in specified file between two branches
 
 <br>
+
+### GitHub Pull Request
+<br>
+
+Merging and rebasing both occur on the local level, and as usual, changes can be pushed to a remote repository to synchronize the two versions. However, after a development branch is completed and pushed to a remote repository, branch incorporation may also materialize on the remote level. Projects typically have one lead or senior developer who maintains full control over the entire repository. Thus, if you do not own the respository, you cannot integrate a development branch into the main branch without explicit permission. In GitHub, this is achieved by generating a "pull request" which allows collaborating developers to review (and provide feedback on) your code changes before incorporating them into the main branch. You may conduct a pull request by following the steps below.
+
+1) Select "pull request" on the repository's navigation bar  
+2) Click on the green "New pull request" button
+3) Select two branches to compares
+4) Click on the gree "Create pull request" button
+
+If you are the project lead, at this point, you will see a list of pull requests on the repository's pull request page. Simply select the particular pull request you wish to review, then at the bottom of the page, you can click on the green drop-down menu button to select whether you want to perform a merge or a rebase. Then further down the page, click on the green "Confirm" button, and you will have successfuly integrated the two branches. For more information on this process, [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) provides detailed descriptions of their pull-request processes. 
 
