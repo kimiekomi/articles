@@ -31,7 +31,9 @@ Another method to consolidate two local branches, is through the ```git rebase <
 
 Some developers may choose to be more involved with the rebase process by rebasing in interactive mode. Interactive rebase provides users more control over a branch's commit hisotry by performing dedicated actions on individual commits. To enter interactive mode, run the ```git rebase -i <branch name>``` command (with the receiving branch's name). Git will then open a text editor with a list of all the commits that will be moved to the receiving branch. At this point, you have several to perform which include:
 
-- ```p, pick <commit>``` : 
+- ```p <commit>``` : (pick) use commit 
+- ```r <commit>``` : (reword) use commit change commit message
+
 
 <br>
 
