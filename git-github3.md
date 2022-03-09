@@ -93,11 +93,23 @@ If you are the project lead, at this point, you will see a list of pull requests
 ### Git Stash
 <br>
 
-One last operation that you may find useful is the ```git stash``` command which temporarily stores *tracked* staged or unstaged changes in a separate location and reverts the working directory to the last commit. This process allows developers to pause their work, reserve file modification that aren't ready to be staged or committed, and proceed work on a different section of the codebase. To employ previously stashed changes, run the ```git stash pop``` command to reapply code changes to the working directory and remove them from the stash. Similarly, the ```git stash reapply``` command restores code modifications but retains them in the stash to allow access from multiple branches. Please note that, Git will not stash untracked or ignored files. To override this restriction and allow Git to stash untracked files, use the ```git stash -u``` or ```git stash --include-untracked``` command. If you wish to store multiple stashes, it is best practice to add a message to each stash by using the ```git stash save "<descriptive message>"```command to provide quick identification. The ```git stash list``` will display an ordered list of stashed changes, with the most recent stash at the top of the list. To select a particular stash to reapply, simply run ```git stash pop stash@{<number>}``` to select the desired stash. 
+One last operation that you may find useful is the ```git stash``` command which temporarily stores *tracked* staged or unstaged changes in a separate location and reverts the working directory to the last commit. This process allows developers to pause their work, reserve file modification that aren't ready to be staged or committed, and proceed work on a different section of the codebase. To employ previously stashed changes, run the ```git stash pop``` command to reapply code changes to the working directory and remove them from the stash. Similarly, the ```git stash reapply``` command restores code modifications but retains them in the stash to allow access from multiple branches. On the other hand, if you wish to remove a stash, run the ```git stash drop stash@{<stash number>}``` command to discard the specified stash. To remove all stashes, simply run the ```git stash clear``` command. 
+
+Please note that, stashed changes are only saved locally and not in remote repositories. Additionally, Git will not stash untracked or ignored files. To override this restriction and allow Git to stash untracked files, use the ```git stash -u``` or ```git stash --include-untracked``` command. 
+
+<br>
+
+If you wish to store multiple stashes, it is best practice to add a message to each stash by using the ```git stash save "<descriptive message>"```command to provide quick identification. The ```git stash list``` will display an ordered list of stashed changes, with the most recent stash at the top of the list. If a stash included a message, it will appear on the list. To select a particular stash to reapply, simply run ```git stash pop stash@{<stash number>}``` to select the desired stash. Storing multiple stashes may result in conflicting changes with continued changes to HEAD. In this scenario, it may be prudent to reapply the stashed changes onto a new branch by running the ```git stash branch <new branch name> stash @{<stash number>}``` command.
+
+<br>
+
+<img style="float: block; margin: 0" width="700" height="100" src="images/stash.png"> 
 
 <br>
 
 ### Conclusion
 <br>
 
-Many developers consider Git a difficult subject to comprehend; however, it is agreed upon that Git is a vital tool for any developer, regardless of their expertise level or job title.  
+There are numerous other Git commands such as ```git cherry-pick```, ```git revert```, ```git tag```, and so on. However, they are not widely used and therefore, I will not bore you with those details. The commands and operations that I have discussed thus far are the ones you will use throughout your project and will aid you in your project management. Many developers consider Git a difficult subject to comprehend; however, it is widely agreed that Git is a vital tool for any developer, regardless of expertise level or job title. A developer who understands and utilizes Git with GitHub is a more employable, efficient, and adaptable programmer. Without a doubt, you are a better and more professional developer with Git and GitHub in your toolbox. 
+
+And with that, I will conclude my *lengthy* Git and GitHub tutorial. Thanks for reading and as always, Happy Coding! 
