@@ -88,3 +88,16 @@ Merging and rebasing both occur on the local level, and as usual, changes can be
 
 If you are the project lead, at this point, you will see a list of pull requests on the repository's pull request page. Simply select the particular pull request you wish to review, then at the bottom of the page, you can click on the green drop-down menu button to select whether you want to perform a merge or a rebase. Then further down the page, click on the green "Confirm" button, and you will have successfuly integrated the two branches. For more information on this process, [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) provides detailed descriptions of their pull-request processes. 
 
+<br>
+
+### Git Stash
+<br>
+
+One last operation that you may find useful is the ```git stash``` command which temporarily stores *tracked* staged or unstaged changes in a separate location and reverts the working directory to the last commit. This process allows developers to pause their work, reserve file modification that aren't ready to be staged or committed, and proceed work on a different section of the codebase. To employ previously stashed changes, run the ```git stash pop``` command to reapply code changes to the working directory and remove them from the stash. Similarly, the ```git stash reapply``` command restores code modifications but retains them in the stash to allow access from multiple branches. Please note that, Git will not stash untracked or ignored files. To override this restriction and allow Git to stash untracked files, use the ```git stash -u``` or ```git stash --include-untracked``` command. If you wish to store multiple stashes, it is best practice to add a message to each stash by using the ```git stash save "<descriptive message>"```command to provide quick identification. The ```git stash list``` will display an ordered list of stashed changes, with the most recent stash at the top of the list. To select a particular stash to reapply, simply run ```git stash pop stash@{<number>}``` to select the desired stash. 
+
+<br>
+
+### Conclusion
+<br>
+
+Many developers consider Git a difficult subject to comprehend; however, it is agreed upon that Git is a vital tool for any developer, regardless of their expertise level or job title.  
