@@ -29,6 +29,15 @@ Another method to consolidate two local branches, is through the ```git rebase <
 
 <br>
 
+Some developers may choose to be more involved with the rebase process by rebasing in interactive mode. Interactive rebase provides users more control over a branch's commit hisotry by performing dedicated actions on individual commits. To enter interactive mode, run the ```git rebase -i <branch name>``` command (with the receiving branch's name). 
+
+- 
+
+<br>
+
+### Merge Conflicts
+<br>
+
 Git is able to easily and efficiently handle branch integration when there are no disparities between branches. However, attempting to merge files that contain code discrepancies will result in a "merge conflict" which occurs when Git is unable to automatically resolve and merge code differences. Merge conflicts arise when two branches have competing changes to the same line of code or when a file has been deleted from one branch but not the other. These circumstances require developers to resolve the conflict (and commit the changes) before Git can proceed with the merge.   
 
 <br>
@@ -62,9 +71,13 @@ If you are the project lead, at this point, you will see a list of pull requests
 ### Git Diff
 <br>
 
-When workingw with multiple branche, another useful command to incorporate into your workflow is the ```git diff``` command which is used to view variations between files, branches, or even commits. The ```git diff``` command may be used in the following manner:
+When workingw with multiple branche, another useful command to incorporate into your workflow is the ```git diff``` command which is used to view variations between files, branches, or even commits. Some developers use this command before running ```git merge``` in order to foresee and prevent a merge conflict scenario, as ```git diff``` simply compares the HEAD with the index. In other words, ```git diff``` compares two version and reflects the differences between content in the working directory and the stage. The ```git diff``` command may be used in the following manner:
 
-- 
+- ```git diff``` : compares uncommitted changes across entire repository since the last commit
+- ```git diff <file path>``` : compares changes made to specified files
+- ```git diff <older hashcode> <newer hashcode>``` : compares changes between two commits 
+- ```git diff <branch name> <other branch name>``` : compares changes between two branches
+- ```git diff <branch name> <other branch name> <filename>``` : compares changes in specified file between two branches
 
 <br>
 
