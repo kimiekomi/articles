@@ -33,7 +33,8 @@ Some developers may choose to be more involved with the rebase process by rebasi
 
 - ```p <commit>``` : (pick) use commit 
 - ```r <commit>``` : (reword) use commit change commit message
-
+- ```e <commit>``` : (edit) use commit and modify contents of commit
+- 
 
 <br>
 
