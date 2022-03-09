@@ -36,6 +36,7 @@ Some developers may choose to be more involved with the rebase process by rebasi
 - ```e <commit>``` : (edit) use commit and modify contents of commit
 - ```d <commit>``` : (drop) remove commit
 - ```s <commit>``` : (squash) use commit and combine with previous commit 
+- ```f <commit>``` : (fixup) same as squash but removes second commit message
 
 <br>
 
