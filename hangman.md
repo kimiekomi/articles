@@ -41,17 +41,6 @@ def random_word(list):
 
     return hidden_word
 
-```
-<br>
-
-My first task was to create a list of words, which I stored in a separate file (for potential reuse with a different application or game at a later time). I then used Python's built-in ```random.choice()``` method, to arbitraly select a word for the game.  
-
-<br>
-
-### Display Word Status
-<br>
-
-```python
 
 def word_status(word):
     word_state = ""
@@ -64,7 +53,7 @@ def word_status(word):
 ```
 <br>
 
-At the initialization of the game, each letter of the hidden word will be displayed as blank lines, since none of the letters have been guessed yet. As the game proceeds, each letter will be revealed when it is correctly guessed. 
+My first task was to create a list of words, which I stored in a separate file (for potential reuse with a different application or game at a later time). I then used Python's built-in ```random.choice()``` method, to arbitraly select a word for the game. At the initialization of the game, each letter of the hidden word will be displayed as blank lines, since none of the letters have been guessed yet. As the game proceeds, the letter will only be revealed when it is correctly guessed. 
 
 <br>
 
@@ -162,11 +151,7 @@ def attempt_status(attempts_remaining):
 ```
 <br>
 
-I created a variable to track the number of attempts remaining in the game. After each round, if the player correctly guesses a letter, the attempt status will remain unchanged. However, if a letter was incorrectly guessed, then the player will lose an attempt. Additionally, an illustration of the game or hanged man status will be displayed after each attempt. This is done through a simple if/else statement that assigns each attempt status to a specific drawing.  
-
-<br>
-
-The game is over when one of 2 conditions occur: 1) all the letters in the hidden word have been guessed or 2) the player has exhausted all 6 attempts, at which point the entire hidden word will be revealed. 
+I created a variable to track the number of attempts remaining in the game. After each round, if the player correctly guesses a letter, the attempt status will remain unchanged. However, if a letter was incorrectly guessed, then the player will lose an attempt. Additionally, an illustration of the game or hanged man status will be displayed after each attempt. This is done through a simple if/else statement that assigns each attempt status to a specific drawing. The game is over when either occurs: 1) all the letters in the hidden word have been guessed or 2) the player has exhausted all 6 attempts, at which point the entire hidden word will be revealed. 
 
 <br>
 
