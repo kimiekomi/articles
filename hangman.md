@@ -7,11 +7,11 @@
 
 <br>             
 
-This article will explain my Python version of the classic word guessing game - Hangman. This single-player game consists of a hidden computer-generated word in which the player must reveal through guessing the letters of the word. The computer will display the length of the hidden word and the player will guess the letters individually. If the player guesses a letter that is not in the hidden word, the computer will start to draw elements of a man. In this particular version, a complete illustion of a man consists of six body parts (one head, one body, two arms and two legs). Each body part represents an incorrectly guessed letter, as no body parts are drawn for correctly guessed letters. The player loses the game if the word has *not* been guessed once all six body parts are displayed and the man is considered "hanged" (hence the name, Hangman). The
+This article will explain my Python version of the classic word guessing game - Hangman. This single-player game consists of a hidden computer-generated word in which the player must reveal through guessing the letters of the word. The computer will display the length of the hidden word and the player will guess the letters individually. If the player guesses a letter that is not in the hidden word, the computer will start to draw elements of a man. In this particular version, a complete illustion of a man consists of six body parts (1 head, 1 body, 2 arms and 2 legs). Each body part represents an incorrectly guessed letter, as no body parts are drawn for correctly guessed letters. The player loses the game if the word has *not* been guessed once all 6 body parts are displayed and the man is considered "hanged" (hence the name, Hangman).
 
 <br>
 
-The main aspect of the game was simply to compare the user input with the letters in the hidden word. However, the code was divided into various components of the game which included:
+The main aspect of the code simply compares the user input with the letters in the hidden word. However, the code was divided into various components of the game which included:
 
 - generating a random word for player to guess
 - printing the status of the word (i.e. which letters have been guessed)
@@ -64,7 +64,7 @@ def word_status(word):
 ```
 <br>
 
-At the initialization of the game, each letter of the hidden word will be displayed with blank lines, as none of the letters have been guessed yet. As the game proceeds, each letter will be revealed if it was correctly guessed. 
+At the initialization of the game, each letter of the hidden word will be displayed as blank lines, since none of the letters have been guessed yet. As the game proceeds, each letter will be revealed when it is correctly guessed. 
 
 <br>
 
@@ -95,7 +95,7 @@ def prompt_user():
 ```
 <br>
 
-This game is played from the command line, where users will enter their letter guesses. Exception handling is achieved at this stage, as the game does not accept number or special character inputs. Additionally, players are only allowed to enter one letter at a time.
+This game is played from the command line, where users will enter their letter guesses. Exception handling is achieved at this stage, as the game does not accept integers or special character inputs. Additionally, players are only allowed to enter one letter at a time. Each of the above scenarios will result in a prompt for the user to submit a valid letter-entry. 
 
 <br>
 
@@ -124,20 +124,52 @@ def letter_compare(secret_word, correct_letters):
 ```
 <br>
 
-After obtaining the a user input, I compared the guessed letter with each letter in the hidden word. If the hidden word contains the guessed letter, then the previously blank line(s) will be replaced with the letter and the letter will be included to the "correct guesses" string to prevent users from repeatedly guessing the same letter. The player will then be prompted again to guess a new letter. If the player enters a previously guessed letter, they will be informed of such and prompted to submit a different entry. 
+After obtaining a user input, I compared the guessed letter with each character in the hidden word. If the hidden word contains the guessed letter, then the previously blanked line(s) will be replaced with the letter. This function ultimately returns the new status of the hidden word, with only the correctly guessed letters revealed. Furthermore, letter guesses are tracked after each turn, by including them in either the "correct guesses" or "incorrect guesses" string to prevent users from repeatedly entering the same letter. If the player enters a previously guessed letter, the player will be prompted to submit a different entry. 
 
 <br>
 
-### Display Hangman Depiction 
+### Depict Hangman Status 
 <br>
 
 ```python
 
+def attempt_status(attempts_remaining):
+    ...
 
+    if attempts_remaining == 2:
+        return """Attempts remaining: X X\n
+            x-------x
+            |       |
+            |       0
+            |      /|\\
+            |
+            |
+            """
+    ...
+
+    else:
+        return """Attempts remaining: None\n
+            x-------x
+            |       |
+            |       0
+            |      /|\\
+            |      / \\
+            |
+
+            GAME OVER
+                """
 
 ```
 <br>
 
-I created a variable to track the number of attempts remaining in the game. After each round, if the player correctly guesses a letter, the attemps status will remain unchanged. However, if a letter was incorrectly guessed, then the player will lose an attempt. Additionally, an illustration of the game or hanged man status will be displayed after each attempt. 
+I created a variable to track the number of attempts remaining in the game. After each round, if the player correctly guesses a letter, the attempt status will remain unchanged. However, if a letter was incorrectly guessed, then the player will lose an attempt. Additionally, an illustration of the game or hanged man status will be displayed after each attempt. This is done through a simple if/else statement that assigns each attempt status to a specific drawing.  
+
+<br>
+
+The game is over when one of 2 conditions occur: 1) all the letters in the hidden word have been guessed or 2) the player has exhausted all 6 attempts, at which point the entire hidden word will be revealed. 
+
+<br>
+
+So there you have it, folks - a simple command line interface (CLI) Hangman game written in Python! In my next article, I will review my Wordle code, which is based off the Hangman game, but has a couple varying elements. The entirety of my Hangman code is available on [GitHub](https://github.com/kimiekomi/hangman). Thanks for reading and as always, Happy Coding!
 
 <br>
